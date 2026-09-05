@@ -1,5 +1,3 @@
-import './style.css'
-
 const assetUrl = (fileName) => `${import.meta.env.BASE_URL}${fileName}`
 const basePath = import.meta.env.BASE_URL.replace(/\/$/, '')
 const routeLink = (path) => `${basePath}${path === '/' ? '/' : path}`

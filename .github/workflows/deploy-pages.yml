@@ -35,6 +35,8 @@ jobs:
 
       - name: Add SPA route fallbacks
         run: |
+          mkdir -p dist/src
+          cp src/style.css dist/src/style.css
           for route in projects works resume about contact; do
             mkdir -p "dist/$route"
             cp dist/index.html "dist/$route/index.html"
