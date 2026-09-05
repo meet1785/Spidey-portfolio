@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-labelledby="title desc">
+  <title id="title">Spider emblem</title>
+  <desc id="desc">A red and black spider emblem inspired by comic-book web iconography.</desc>
+  <defs>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff4b3e"/>
+      <stop offset="1" stop-color="#b30e24"/>
+    </linearGradient>
+  </defs>
+  <circle cx="110" cy="110" r="102" fill="#151515" stroke="#e12d3f" stroke-width="5"/>
+  <g fill="url(#red)" stroke="#080808" stroke-width="5" stroke-linejoin="round">
+    <ellipse cx="110" cy="108" rx="25" ry="38"/>
+    <path d="M91 84 70 52 76 94 43 72 67 112 28 105 68 125 34 150 74 138 57 179 94 148 110 191 126 148 163 179 146 138 186 150 152 125 192 105 153 112 177 72 144 94 150 52 129 84Z"/>
+    <path d="M99 78 83 35 106 70 110 25 114 70 137 35 121 78Z"/>
+  </g>
+  <g fill="none" stroke="#ff6670" stroke-width="2" opacity=".55">
+    <path d="M110 28v164M47 72l126 76M47 148 173 72M29 110h162"/>
+  </g>
+</svg>
