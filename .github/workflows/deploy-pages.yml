@@ -33,6 +33,13 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Add SPA route fallbacks
+        run: |
+          for route in projects works resume about contact; do
+            mkdir -p "dist/$route"
+            cp dist/index.html "dist/$route/index.html"
+          done
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
