@@ -1,5 +1,6 @@
-const baseUrl = import.meta.env.BASE_URL
-const assetUrl = (fileName) => `${baseUrl}${fileName}`
+const baseUrl = import.meta.env?.BASE_URL || '/Spidey-portfolio/'
+const assetPrefix = import.meta.env?.BASE_URL ? baseUrl : `${baseUrl}public/`
+const assetUrl = (fileName) => `${assetPrefix}${fileName}`
 const basePath = baseUrl.replace(/\/$/, '')
 const routeLink = (path) => `${basePath}${path === '/' ? '/' : path}`
 
