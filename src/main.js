@@ -1,5 +1,6 @@
-const assetUrl = (fileName) => `${import.meta.env.BASE_URL}${fileName}`
-const basePath = import.meta.env.BASE_URL.replace(/\/$/, '')
+const baseUrl = import.meta.env?.BASE_URL || '/Spidey-portfolio/'
+const assetUrl = (fileName) => `${baseUrl}${fileName}`
+const basePath = baseUrl.replace(/\/$/, '')
 const routeLink = (path) => `${basePath}${path === '/' ? '/' : path}`
 
 document.querySelector('#app').innerHTML = `
@@ -76,7 +77,7 @@ const projects = [
 
 const projectCards = projects.map(([name, type, description, repo, liveUrl], index) => `<article class="route-project"><span>${String(index + 1).padStart(2, '0')}</span><div><small>${type}</small><h3>${name}</h3><p>${description}</p><div class="route-project-links"><a href="https://github.com/meet1785/${repo}" target="_blank" rel="noreferrer">GitHub ↗</a>${liveUrl ? `<a href="${liveUrl}" target="_blank" rel="noreferrer">Live demo ↗</a>` : ''}</div></div><b>↗</b></article>`).join('')
 
-const route = window.location.pathname.replace(import.meta.env.BASE_URL, '').replace(/\/$/, '') || '/'
+const route = window.location.pathname.replace(baseUrl, '').replace(/\/$/, '') || '/'
 if (route === '/projects' || route === '/works') {
   document.querySelector('#app').innerHTML = `${pageNav}<main class="route-page"><p class="micro-label">Project archive / GitHub verified</p><h1>Selected<br /><em>work.</em></h1><p class="route-lead">The strongest builds from Meet Shah's public project archive, from AI systems and video pipelines to full-stack products.</p><div class="route-projects">${projectCards}</div></main>`
 } else if (route === '/resume') {
